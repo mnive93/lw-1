@@ -9,10 +9,15 @@ Please be patient
 {% endblock %}
 
 {% block content %}
+<div class="social">
+<div class="fb-like" data-href="https://www.facebook.com/likewyss" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="tahoma" data-action="like"></div>
+<div class="twitter-follow"><a href="https://twitter.com/likewyss" class="twitter-follow-button" data-show-count="false" data-size="large">Follow Likewyss on Twitter</a></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
 <div class="main-wrapper">
 	{% if result == 'success' %}
 	<h1>Success</h1>
-	<p>Your email address {{ email.emailaddress }} is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p>
+	<p>Your email address <b>{{ email.emailaddress }}</b> is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p>
 	{% else %}
 	<h1>Patience, please.</h1>
 	<p>Wow, that curious huh? We are still building the platform.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.id }}.<br>We will notify you as soon as we are done.</p>

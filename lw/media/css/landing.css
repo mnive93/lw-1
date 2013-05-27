@@ -1,9 +1,19 @@
 .main-wrapper {
 	position:absolute;
 	top:30%;
-	left:20%;
+	left:21%;
 	width:800px;
 	text-align:center;
+}
+
+.social {
+	position:relative;
+	top:500px;
+	text-align:center;
+}
+
+.social div {
+	margin-bottom:20px;
 }
 
 .main-wrapper h1 {
