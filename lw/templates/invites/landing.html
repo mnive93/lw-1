@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Hello.</title>
+	<link rel="stylesheet" type="text/css" href="/media/css/basic.css" />
+</head>
+<body>
+	<h1>Hello.</h1>
+	<p>Nice to meet us? Likewyss.</p>
+	<form action="." method="post">
+		<p>{% csrf_token %}</p>
+		{{ form.as_p }}
+		<input type="submit" value="Mail me when ready" />
+		<input type="hidden" name="next" value="/success/">
+	</form>
+</body>
+</html>

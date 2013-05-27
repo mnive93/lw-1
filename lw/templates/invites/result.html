@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Successfully signed up</title>
+</head>
+<body>
+	{% if result == 'success' %}
+	<h1>Success</h1>
+	<p>Your email address {{ email.emailaddress }} is at slot #{{ email.id }}. We will notify you once we are ready to welcome you into the site.</p>
+	{% else %}
+	<h1>Patience, please.</h1>
+	<p>Wow, that curious huh? We are still building the platform, and your email address {{ email.emailaddress }} is already on our waiting list at slot #{{ email.id }}. We will notify you as soon as we are done.</p>
+	{% endif %}
+	<a href="/">Return home</a>
+</body>
+</html>

@@ -1,17 +1,17 @@
 from django.conf.urls import patterns, include, url
+from invites.views import *
+from django.views.generic import TemplateView
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+import os.path
+media = os.path.join(os.path.dirname(__file__), 'media')
+
+# URL patterns for invite campaign pages
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'lw.views.home', name='home'),
-    # url(r'^lw/', include('lw.foo.urls')),
+    (r'^$', landing),
+    (r'^success/$', TemplateView.as_view(template_name='invites/success.html'))
+)
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+urlpatterns += patterns('',
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':media}),
 )
