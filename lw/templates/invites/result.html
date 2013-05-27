@@ -11,8 +11,9 @@ Please be patient
 {% block content %}
 <div class="social">
 <div class="fb-like" data-href="https://www.facebook.com/likewyss" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="tahoma" data-action="like"></div>
-<div class="twitter-follow"><a href="https://twitter.com/likewyss" class="twitter-follow-button" data-show-count="false" data-size="large">Follow Likewyss on Twitter</a></div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="twitter-follow">
+	<a href="https://twitter.com/likewyss" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @likewyss</a>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.likewyss.com" data-text="Signup for Likewyss beta" data-via="likewyss" data-size="large" data-hashtags="lwbeta">Tweet</a></div>
 </div>
 <div class="main-wrapper">
 	{% if result == 'success' %}

@@ -1,19 +1,25 @@
 .main-wrapper {
 	position:absolute;
-	top:30%;
-	left:21%;
+	top:22.5%;
+	left:20%;
 	width:800px;
 	text-align:center;
 }
 
 .social {
 	position:relative;
-	top:500px;
+	top:425px;
+	right:20px;
 	text-align:center;
 }
 
 .social div {
 	margin-bottom:20px;
+}
+
+.twitter-follow {
+	position:relative;
+	left:2%;
 }
 
 .main-wrapper h1 {

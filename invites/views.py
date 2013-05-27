@@ -5,6 +5,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from invites.forms import InviteForm
 from invites.models import InviteEmails
 
+import locale
+locale.setlocale(locale.LC_ALL, 'en_US')
+
 def landing(request):
     if request.method=='POST':
         form = InviteForm(request.POST)
@@ -19,9 +22,12 @@ def landing(request):
             return render_to_response('invites/result.html', RequestContext(request, {'email':emailadd, 'result':'existing'}))
     else:
         form = InviteForm()
+        numberofemails = InviteEmails.objects.count()
+        numberleft = locale.format('%d', 2500 - numberofemails, grouping = True)
         
     var = RequestContext(request, {
-        'form':form
+        'form':form,
+        'number':numberleft
     })
     
     return render_to_response('invites/landing.html', var)

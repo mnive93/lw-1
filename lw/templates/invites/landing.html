@@ -6,10 +6,12 @@
 <div class="main-wrapper">
 	<h1>Hello.</h1>
 	<p>Nice to meet us? Likewyss.</p>
+	<p>Likewyss will be available only to select few people, initially.</p>
+	<p>Just {{ number }} invites left. Hurry up</p>
 	<form action="." method="post">
 		<p>{% csrf_token %}</p>
 		<input type="text" name="emailaddress" id="id_emailaddress" /><br />
-		<input type="submit" value="Mail me when ready" class="subbutton" />
+		<input type="submit" value="Count me in!" class="subbutton" />
 		<input type="hidden" name="next" value="/success/">
 	</form>
 </div>
