@@ -9,12 +9,14 @@ Please be patient
 {% endblock %}
 
 {% block content %}
+<div class="main-wrapper">
 	{% if result == 'success' %}
 	<h1>Success</h1>
-	<p>Your email address {{ email.emailaddress }} is at slot #{{ email.id }}. We will notify you once we are ready to welcome you into the site.</p>
+	<p>Your email address {{ email.emailaddress }} is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p>
 	{% else %}
 	<h1>Patience, please.</h1>
-	<p>Wow, that curious huh? We are still building the platform, and your email address {{ email.emailaddress }} is already on our waiting list at slot #{{ email.id }}. We will notify you as soon as we are done.</p>
+	<p>Wow, that curious huh? We are still building the platform.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.id }}.<br>We will notify you as soon as we are done.</p>
 	{% endif %}
 	<a href="/">Return home</a>
+</div>
 {% endblock %}

@@ -1,16 +1,17 @@
-<html>
-<head>
-	<title>Hello.</title>
-	<link rel="stylesheet" type="text/css" href="/media/css/basic.css" />
-</head>
-<body>
+{% extends 'invites/base.html' %}
+
+{% block title %}Hello.{% endblock %}
+
+{% block content %}
+<div class="main-wrapper">
 	<h1>Hello.</h1>
 	<p>Nice to meet us? Likewyss.</p>
 	<form action="." method="post">
 		<p>{% csrf_token %}</p>
-		{{ form.as_p }}
-		<input type="submit" value="Mail me when ready" />
+		<input type="text" name="emailaddress" id="id_emailaddress" /><br />
+		<input type="submit" value="Mail me when ready" class="subbutton" />
 		<input type="hidden" name="next" value="/success/">
 	</form>
-</body>
-</html>
+</div>
+<div class="fb-like" data-href="https://www.facebook.com/likewyss" data-send="true" data-width="400" data-show-faces="true" data-font="tahoma"></div>
+{% endblock %}
