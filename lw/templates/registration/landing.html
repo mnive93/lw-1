@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Hello.</title>
+</head>
+
+<body>
+	<h1>Hello.</h1>
+	<p>Welcome to Likewyss.</p>
+	{% if form.has_errors %}
+	<li>That email address is already taken. Please try a different one.</li>
+	{% endif %}
+	<form action="." method="post">
+		<input for="email" id="id_email" type="text" name="email" />
+		<input type="submit" id="emailsubmit" value="Get started" />
+		<p>{% csrf_token %}</p>
+	</form>
+</body>

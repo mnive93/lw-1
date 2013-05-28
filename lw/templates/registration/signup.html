@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Welcome aboard Likewyss.</title>
+</head>
+
+<body>
+	<h1>Come in, please.</h1>
+	<p>Thank you for signing up with your email address {{ email }}. Get started by filling out the form given below.</p>
+	
+	<form action="." method="post">
+		{{ form.as_p }}
+		<p>{% csrf_token %}</p>
+		<input type="submit" value="Signup" name="submit" />
+	</form>
+</body>
+</html>

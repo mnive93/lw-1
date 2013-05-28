@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Login to Likewyss</title>
+</head>
+
+<body>
+	<h1>Login to Likewyss</h1>
+	<form action="." method="post">
+		{{ form.as_p }}
+		<p>{% csrf_token %}</p>
+		<input type="submit" value="Login" />
+		<input type="hidden" name="next" value="/feed/" />
+	</form>
+</body>
+</html>
