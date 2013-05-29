@@ -1,15 +1,19 @@
-<html>
-<head>
-	<title>Login to Likewyss</title>
-</head>
+{% extends "parent/landing-base.html" %}
 
-<body>
-	<h1>Login to Likewyss</h1>
-	<form action="." method="post">
-		{{ form.as_p }}
-		<p>{% csrf_token %}</p>
-		<input type="submit" value="Login" />
-		<input type="hidden" name="next" value="/feed/" />
-	</form>
-</body>
-</html>
+{% block title %}Login to Likewyss{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row"><div class="span9">
+		<h1>Login to Likewyss</h1>
+		<form class="well" action="." method="post">
+			<p>{% csrf_token %}</p>
+			<i class="icon-flag"></i> <input type="text" name="username" id="id_username" placeholder="Username or email" /><br />
+			<i class="icon-lock"></i> <input type="password" name="password" id="id_password" placeholder="Password" /><br />
+			<label id="remember"><input name="remember_me" type="checkbox" class="checkbox" /><span class="help-inline">Keep me logged in</span></label>
+			<button type="submit" class="btn btn-danger">Login to Likewyss</button> or <a href="/landing/"><button type="button" class="btn btn-success">Sign up</button></a>
+			<input type="hidden" name="next" value="/feed/" />
+		</form>
+		</div></div>
+	</div>
+{% endblock %}

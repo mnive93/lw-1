@@ -15,9 +15,9 @@ class SignupFormA(forms.Form):
         raise forms.ValidationError('This email address has been linked to another account on Likewyss.')
         
 class SignupFormB(forms.Form):
-    fullname = forms.CharField(max_length=64, help_text="What's your name, again?")
-    username = forms.CharField(max_length=32, help_text="Thou shalt reside at http://www.likewyss.com/username")
-    password = forms.CharField(max_length = 32, widget = forms.PasswordInput(), help_text="Pick a strong one.")
+    fullname = forms.CharField(max_length=64)
+    username = forms.CharField(max_length=32)
+    password = forms.CharField(max_length = 32, widget = forms.PasswordInput())
     
     def clean_username(self):
         user = self.cleaned_data['username']

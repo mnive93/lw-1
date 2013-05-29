@@ -1,16 +1,29 @@
-<html>
-<head>
-	<title>Welcome aboard Likewyss</title>
-</head>
+{% extends 'parent/landing-base.html' %}
 
-<body>
-	<h1>Come in, please.</h1>
-	<p>Thank you for signing up with your email address {{ email }}. Get started by filling out the form given below.</p>
-	
-	<form action="." method="post">
-		{{ form.as_p }}
-		<p>{% csrf_token %}</p>
-		<input type="submit" value="Signup" name="submit" />
-	</form>
-</body>
-</html>
+{% block title %}Welcome aboard Likewyss{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="span9">
+			<h1>Come in, please.</h1>
+			<p>Thank you for signing up with your email address {{ email }}. Tell us more about you.</p>
+			
+			{% if form.has_errors %}
+			<ul class="error">
+				{% for error in errors %}
+				<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			
+			<form class="well" id="signup" action="." method="post">
+				{% csrf_token %}
+				<i class="icon-user"></i> <input type="text" id="id_fullname" name="fullname" class="large" placeholder="Full name" /><br>
+				<i class="icon-flag"></i> <input type="text" id="id_username" name="username" class="large" placeholder="Username" /><br>
+				<i class="icon-lock"></i> <input type="password" id="id_password" name="password" class="large" placeholder="Password" /><br>
+				<button type="submit" class="btn btn-info">Sign up for Likewyss</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

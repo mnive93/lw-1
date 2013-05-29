@@ -1,18 +1,35 @@
-{% extends 'invites/base.html' %}
+{% extends 'parent/landing-base.html' %}
 
 {% block title %}Hello.{% endblock %}
 
 {% block content %}
-<div class="main-wrapper">
-	<h1>Hello.</h1>
-	<p>Nice to meet us? Likewyss.</p>
-	<p>Likewyss will be available only to select few people, initially.</p>
-	<p>Just {{ number }} invites left. Hurry up, fill your email below.</p>
-	<form action="." method="post">
-		<p>{% csrf_token %}</p>
-		<input type="text" name="emailaddress" id="id_emailaddress" /><br />
-		<input type="submit" value="Count me in!" class="subbutton" />
-		<input type="hidden" name="next" value="/success/">
-	</form>
+<div class="row">
+	<div class="span9">
+		<h1>Hello.</h1>
+		<h3>Nice to meet us? Likewyss.</h3>
+		<form action="." class="well" method="post">
+			<p>Likewyss will be available only to select few people initially. Just {{ number }} slots left. Hurry up!</p>
+			<p>{% csrf_token %}</p>
+			<input type="text" class="xxlarge" name="emailaddress" placeholder="Enter your email address" id="id_emailaddress" /><br>
+			<button type="submit" class="btn btn-success">Count me in</button>
+		</form>
+	</div>
+</div>
+
+<div class="row-fluid">
+	<div class="span4">
+		<h1>News.</h1>
+		<p>Likewyss is an amazing platform that connects you to the things you love. Unlike Pulse, Flipboard, etc. we are not limited to a few magazines. Love startups? Get the best content on startups right on your feed. Period.</p>
+	</div>
+	
+	<div class="span4">
+		<h1>People.</h1>
+		<p>The greatest content creators in the world are not newspapers or magazines. It is you, the people. Every piece of content on Likewyss will be created and owned by you. Start penning your thoughts. Now.</p>
+	</div>
+	
+	<div class="span4">
+		<h1>Connections.</h1>
+		<p>While making Likewyss as interest-centric as possible, we have also craftily and elegantly integrated socialization into the platform. Love someone's updates? Star him. Bump his posts up on your feed. Say hi. Today.</p>
+	</div>
 </div>
 {% endblock %}

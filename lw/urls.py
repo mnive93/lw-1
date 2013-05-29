@@ -9,7 +9,6 @@ media = os.path.join(os.path.dirname(__file__), 'media')
 
 urlpatterns = patterns('',
     (r'^$', landing),
-    (r'^success/$', TemplateView.as_view(template_name='invites/success.html'))
 )
 
 urlpatterns += patterns('',

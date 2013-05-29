@@ -24,6 +24,12 @@ def nlr(view):
             return HttpResponseRedirect('/feed/')
         return view(request, *args, **kwargs)
     return new_view
+
+def login(request, *args, **kwargs):
+    if request.method == 'POST':
+        if not request.POST.get('remember_me', None):
+            request.session.set_expiry(0)
+    return auth_views.login(request, *args, **kwargs)
     
 def hello(request):
     if request.method=='POST':
@@ -88,4 +94,4 @@ def logout_user(request):
     return HttpResponseRedirect('/landing/')
     
 def feed(request):
-    return HttpResponse('This is the feed page, %s.' % request.user.get_full_name())
+    return HttpResponse("<a href='/logout/'>Logout, %s</a>" % request.user.username)

@@ -1,17 +1,21 @@
-<html>
-<head>
-	<title>Hello.</title>
-</head>
+{% extends 'parent/landing-base.html' %}
 
-<body>
+{% block title %}Hello.{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="span9">
 	<h1>Hello.</h1>
-	<p>Welcome to Likewyss.</p>
-	{% if form.has_errors %}
+	<h3>Nice to meet us? Likewyss.</h3>
+{% if form.has_errors %}
 	<li>That email address is already taken. Please try a different one.</li>
-	{% endif %}
-	<form action="." method="post">
-		<input for="email" id="id_email" type="text" name="email" />
-		<input type="submit" id="emailsubmit" value="Get started" />
+{% endif %}
+	<form class="well" action="." method="post">
+		<input for="email" id="id_emailaddress" type="text" name="email" placeholder="Sign up with your email address" /><br />
+		<button type="submit" class="btn btn-success">Get started!</button>
 		<p>{% csrf_token %}</p>
 	</form>
-</body>
+	<a href="/login/"><button type="submit" class="btn btn-info">Login if you are with us already</button></a>
+</div>
+</div>
+{% endblock %}

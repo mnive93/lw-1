@@ -22,8 +22,9 @@ def landing(request):
             return render_to_response('invites/result.html', RequestContext(request, {'email':emailadd, 'result':'existing'}))
     else:
         form = InviteForm()
-        numberofemails = InviteEmails.objects.count()
-        numberleft = locale.format('%d', 2500 - numberofemails, grouping = True)
+    
+    numberofemails = InviteEmails.objects.count()
+    numberleft = locale.format('%d', 2500 - numberofemails, grouping = True)
         
     var = RequestContext(request, {
         'form':form,
