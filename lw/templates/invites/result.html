@@ -9,24 +9,20 @@ Please be patient
 {% endblock %}
 
 {% block content %}
+<div class="container">
 <div class="row">
 	<div class="span12">
 	{% if result == 'success' %}
 	<h1>Success.</h1>
-	<p>Your email address <b>{{ email.emailaddress }}</b> is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p>
+	<div class="well"><p>Your email address <b>{{ email.emailaddress }}</b> is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p></div>
 	{% else %}
 	<h1>Patience, please.</h1>
-	<p>Wow, that curious huh? Good things come to those who wait.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.id }}.<br>We will notify you as soon as we are done.</p>
+	<div class="well"><p>Wow, that curious huh? Good things come to those who wait.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.id }}.<br>We will notify you as soon as we are done.</p></div>
 	{% endif %}
-	<a href="/"><button type="submit" class="btn btn-warning">Return home</button></a>
+	<a href="/"><button type="submit" class="btn btn-info"><i class="icon-home"></i> Go home</button></a>
+	<a href="https://www.facebook.com/likewyss" target="_blank"><button type="submit" class="btn btn-facebook"><i class="icon-facebook"></i>&nbsp;&nbsp;Find us on Facebook</button></a>
+	<a href="https://www.twitter.com/likewyss" target="_blank"><button type="submit" class="btn btn-twitter"><i class="icon-twitter"></i>&nbsp;&nbsp;Track us on Twitter</button></a>
 </div>
 
-<span class="span12">
-<div class="fb-like" data-href="https://www.facebook.com/likewyss" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="tahoma" data-action="like"></div>
-<div class="twitter-follow">
-	<button type="submit" class="btn btn-success"><a href="https://twitter.com/likewyss" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @likewyss</a></button>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.likewyss.com" data-text="Signup for Likewyss beta" data-via="likewyss" data-size="large" data-hashtags="lwbeta">Tweet</a>
-</div>
-</span>
 </div>
 {% endblock %}

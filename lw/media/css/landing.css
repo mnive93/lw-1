@@ -35,17 +35,24 @@
 		padding:10px;
 		display:inline-block;
 	}
-		
+	
+	#countmein {
+		padding:10px;
+	}
+			
 	.well p {
 		color:#666;
 		letter-spacing:-0.070em;
-		line-height:30%;
 	}
 		
 	.btn a {
 		text-decoration:none;
 		font-weight:normal;
 		color:#FFF;
+	}
+	
+	.span4 h6 {
+		font-weight:normal;
 	}
 	
 	#remember input {
