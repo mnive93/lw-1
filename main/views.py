@@ -94,4 +94,8 @@ def logout_user(request):
     return HttpResponseRedirect('/landing/')
     
 def feed(request):
-    return HttpResponse("<a href='/logout/'>Logout, %s</a>" % request.user.username)
+    var = RequestContext(request, {
+        'user':request.user,
+    })
+    
+    return render_to_response('pages/feed.html', var)

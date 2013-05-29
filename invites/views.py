@@ -4,11 +4,16 @@ from django.template import RequestContext
 from django.core.exceptions import ObjectDoesNotExist
 from invites.forms import InviteForm
 from invites.models import InviteEmails
+from main.models import SignupHandler
+import random
 
 import locale
 locale.setlocale(locale.LC_ALL, 'en_US')
 
 def landing(request):
+    numberofemails = InviteEmails.objects.count()
+    numberleft = locale.format('%d', 2500 - numberofemails, grouping = True)
+    
     if request.method=='POST':
         form = InviteForm(request.POST)
         
@@ -17,14 +22,13 @@ def landing(request):
             try:
                 emailadd = InviteEmails.objects.get(emailaddress = email)
             except ObjectDoesNotExist:
-                emailadd = InviteEmails.objects.create(emailaddress = email)
+                randomnumber = random.randint(0,100000)
+                emailadd = InviteEmails.objects.create(emailaddress = email, id=numberofemails+1)
+                signuphandle = SignupHandler.objects.create(emailaddress = email, identifiernum = randomnumber)
                 return render_to_response('invites/result.html', RequestContext(request, {'email':emailadd, 'result':'success'}))
             return render_to_response('invites/result.html', RequestContext(request, {'email':emailadd, 'result':'existing'}))
     else:
         form = InviteForm()
-    
-    numberofemails = InviteEmails.objects.count()
-    numberleft = locale.format('%d', 2500 - numberofemails, grouping = True)
         
     var = RequestContext(request, {
         'form':form,

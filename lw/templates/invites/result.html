@@ -14,10 +14,10 @@ Please be patient
 	<div class="span12">
 	{% if result == 'success' %}
 	<h1>Success.</h1>
-	<div class="well"><p>Your email address <b>{{ email.emailaddress }}</b> is at slot #{{ email.id }}.<br>We will notify you once we are ready to welcome you into the site.</p></div>
+	<div class="well"><p>Your email address <b>{{ email.emailaddress }}</b> is at slot #{{ email.pk }}.<br>We will notify you once we are ready to welcome you into the site.</p></div>
 	{% else %}
 	<h1>Patience, please.</h1>
-	<div class="well"><p>Wow, that curious huh? Good things come to those who wait.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.id }}.<br>We will notify you as soon as we are done.</p></div>
+	<div class="well"><p>Wow, that curious huh? Good things come to those who wait.<br>Your email address <b>{{ email.emailaddress }}</b> is already on our waiting list at slot #{{ email.pk }}.<br>We will notify you as soon as we are done.</p></div>
 	{% endif %}
 	<a href="/"><button type="submit" class="btn btn-info"><i class="icon-home"></i> Go home</button></a>
 	<a href="https://www.facebook.com/likewyss" target="_blank"><button type="submit" class="btn btn-facebook"><i class="icon-facebook"></i>&nbsp;&nbsp;Find us on Facebook</button></a>

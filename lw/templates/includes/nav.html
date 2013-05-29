@@ -1,0 +1,32 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li class="active center">
+					<a class="brand" href="/feed/">Likewyss</a>
+				</li>
+			</ul>
+			
+			<form action="/search/" method="get" class="navbar-search pull-left">
+				<input type="text" class="search-query" name="q" placeholder="Search Likewyss" autocomplete="off">
+			</form>
+			
+			<ul class="nav pull-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle='dropdown'>
+						{{ user.get_full_name }}
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#postcompose"><i class="icon-pencil"></i>&nbsp;&nbsp;Compose a post</a></li>
+						<li><a href="/u/{{ user.username }}"><i class="icon-user"></i>&nbsp;&nbsp;View profile</a></li>
+						<li><a href="/settings/"><i class="icon-cogs"></i>&nbsp;&nbsp;Settings</a></li>
+						<li><a href="/logout/"><i class="icon-signout"></i>&nbsp;&nbsp;Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			
+		</div>
+	</div>
+</div>

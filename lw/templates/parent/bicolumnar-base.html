@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/media/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/media/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+	<div class="row">
+		<div class="span12">
+			{% include 'includes/nav.html' %}
+		</div>
+	</div>
+	
+	<!-- Placing JavaScript code at the end so that pages load faster -->
+	
+	<script text="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/media/js/bootstrap.js"></script>
+</body>
