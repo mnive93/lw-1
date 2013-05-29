@@ -17,11 +17,11 @@
 			{% endif %}
 			
 			<form class="well" id="signup" action="." method="post">
-				{% csrf_token %}
-				<i class="icon-user icon-2x"></i>&nbsp;&nbsp;<input type="text" id="id_fullname" name="fullname" class="large" placeholder="Full name" /><br>
-				<i class="icon-flag icon-2x"></i>&nbsp;&nbsp;<input type="text" id="id_username" name="username" class="large" placeholder="Username" /><br>
-				<i class="icon-key icon-2x"></i>&nbsp;&nbsp;<input type="password" id="id_password" name="password" class="large" placeholder="Password" /><br>
-				<button type="submit" class="btn btn-info">Sign up for Likewyss</button>&nbsp;&nbsp;or&nbsp;&nbsp;<a href="/login/"><button type="button" class="btn btn-danger">Login</button></a>
+				<i class="icon-user icon-2x"></i>&nbsp;&nbsp;<input type="text" id="id_fullname" name="fullname" class="input-xlarge" placeholder="Full name" /><br>
+				<i class="icon-flag icon-2x"></i>&nbsp;&nbsp;<input type="text" id="id_username" name="username" class="input-xlarge" placeholder="Username" /><br>
+				<i class="icon-key icon-2x"></i>&nbsp;&nbsp;<input type="password" id="id_password" name="password" class="input-xlarge" placeholder="Password" /><br>
+				<p>{% csrf_token %}</p>
+				<button type="submit" class="btn btn-info"><i class="icon-plus"></i>&nbsp;&nbsp;Sign up for Likewyss</button>&nbsp;&nbsp;or&nbsp;&nbsp;<a href="/login/"><button type="button" class="btn btn-danger"><i class="icon-unlock-alt"></i>&nbsp;&nbsp;Login</button></a>
 			</form>
 		</div>
 	</div>

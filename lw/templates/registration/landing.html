@@ -12,11 +12,11 @@
 {% endif %}
 	<form class="well" action="." method="post">
 		<input for="email" class="input-xxlarge" id="id_emailaddress" type="text" name="email" placeholder="Get started with your email address" /><br>
-		<button type="submit" class="btn btn-success">Sign me up for a new Likewyss account</button> or <a href="/login/"><button type="button" class="btn btn-info">Let me login to my existing account</button></a>
+		<button type="submit" class="btn btn-success"><i class="icon-plus"></i>&nbsp;&nbsp;Sign me up for a new Likewyss account</button>&nbsp;&nbsp;or&nbsp;&nbsp;<a href="/login/"><button type="button" class="btn btn-danger"><i class="icon-unlock-alt"></i>&nbsp;&nbsp;Let me login to my existing account</button></a>
 		<p>{% csrf_token %}</p>
-		<button class="btn btn-facebook"><i class="icon-facebook"> Connect with Facebook</i></button>
-		<button class="btn btn-twitter"><i class="icon-twitter"> Connect with Twitter</i></button>
-		<button class="btn btn-google-plus"><i class="icon-google-plus"> Connect with Google+</i></button>
+		<button class="btn btn-facebook"><i class="icon-facebook">&nbsp;&nbsp;Connect with Facebook</i></button>&nbsp;&nbsp;
+		<button class="btn btn-twitter"><i class="icon-twitter">&nbsp;&nbsp;Connect with Twitter</i></button>&nbsp;&nbsp;
+		<button class="btn btn-google-plus"><i class="icon-google-plus">&nbsp;&nbsp;Connect with Google+</i></button>
 	</form>
 </div>
 
