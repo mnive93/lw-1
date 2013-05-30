@@ -73,7 +73,6 @@ def thanks(request, redirect_url=settings.LOGIN_REDIRECT_URL):
         app_secret = settings.APP_SECRET,
         oauth_token = request.session['request_token']['oauth_token'],
         oauth_token_secret = request.session['request_token']['oauth_token_secret'],
-        oauth_callback = 'http://localhost/result'
     )
     
     authorized_tokens = twitter.get_authorized_tokens(request.GET['oauth_verifier'], callback_url = 'http://localhost/result/')

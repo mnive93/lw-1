@@ -1,3 +1,13 @@
 {% extends 'parent/bicolumnar-base.html' %}
 
 {% block title %}Likewyss{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="container">
+		<div class="span6">
+			{% include 'includes/posting.html' %}
+		</div>
+	</div>
+</div>
+{% endblock %}

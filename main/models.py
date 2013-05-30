@@ -10,3 +10,4 @@ class Posts(models.Model):
     text = models.CharField(max_length=250)
     time = models.DateTimeField(auto_now_add = True)
     popularity = models.IntegerField(default = 1)
+    randomnumber = models.IntegerField()

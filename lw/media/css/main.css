@@ -1,0 +1,52 @@
+.padded-wrapper {
+	margin-top:50px;
+}
+
+.post-wrapper {
+	padding:15px;
+	margin-bottom:10px;
+}
+
+#added-info-wrapper ul {
+	padding:0;
+	margin-left:0;
+}
+#added-info-wrapper ul li {
+	display:inline;
+	list-style:none;
+	margin-bottom:10px;
+}
+
+#basic-info-wrapper h4, .statistic {
+	font-weight:bold;
+	font-size:24px;
+}
+
+.stattext {
+	font-variant:small-caps;
+	font-size:16px;
+}
+
+#basic-info-wrapper h4, .poster-name {
+	margin-bottom:0;
+	line-height:80%;
+}
+
+#basic-info-wrapper h6 {
+	font-size:18px;
+}
+
+#basic-info-wrapper h6, .post-time {
+	font-weight:normal;
+	color:#999;
+	margin-top:0;
+}
+
+.post-time {
+	border-bottom:1px solid #d1d1d1;
+	font-size:10px;
+}
+
+#timeline-wrapper {
+	margin-left:-50px;
+}

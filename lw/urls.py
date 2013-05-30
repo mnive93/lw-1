@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     (r'^$', landing),
     (r'^emailadded/$', processInviteRequest),
     (r'^twitter/$', beginTwitterAuth),
+    (r'^facebook/', include('fbconnect.urls')),
     (r'^result/$', thanks),
 )
 

@@ -1,0 +1,35 @@
+{% extends 'parent/bicolumnar-base.html' %}
+
+{% block title %}{{ fullname }}{% endblock %}
+
+{% block left-content %}
+<div id="basic-info-wrapper" class="span4 padded-wrapper well">
+	<h4>{{ fullname }}</h4>
+	<h6>{{ username }}</h6>
+</div>
+
+<div id="added-info-wrapper" class="span4 well">
+	<ul>	
+		<li class="span1"><span class="statistic">745</span> <span class="stattext">posts</span></li>
+		<li class="span1"><span class="statistic">3,583</span> <span class="stattext">starred</span></li>
+		<li class="span1"><span class="statistic">1,209</span> <span class="stattext">fans</span></li>
+	</ul>
+	<div class="span2">
+		<a href="https://www.facebook.com/{{ facebook }}" target='_blank'><button class="btn btn-facebook"><i class="icon-facebook"></i></button></a>
+		<a href="https://www.twitter.com/{{ twitter }}" target='_blank'><button class="btn btn-twitter"><i class="icon-twitter"></i></button></a>
+		<a href="https://plus.google.com/{{ googleplus }}" target='_blank'><button class="btn btn-google-plus"><i class="icon-google-plus"></i></button></a>
+	</div>
+</div>
+{% endblock %}
+
+{% block right-content %}
+<div class="padded-wrapper" id="timeline-wrapper">
+	{% for post in posts %}
+	<div class="span4 well post-wrapper">
+		<h5 class="poster-name">{{ post.user.get_full_name }}</h5>
+		<h6 class="post-time">{{ post.time }}</h6>
+		<p class="post-text">{{ post.text }}</p>
+	</div>
+	{% endfor %}
+</div>	
+{% endblock %}

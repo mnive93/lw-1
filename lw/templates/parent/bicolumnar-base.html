@@ -3,6 +3,8 @@
 <head>
 	<title>{% block title %}{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="/media/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/media/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/media/css/social-buttons.css" />
 	<link rel="stylesheet" type="text/css" href="/media/font-awesome/css/font-awesome.min.css" />
 </head>
 
@@ -11,6 +13,24 @@
 		<div class="span12">
 			{% include 'includes/nav.html' %}
 		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				{% block top-content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container">
+			<div class="span5">
+				{% block left-content %}{% endblock %}
+			</div>
+			<div class="span6">
+				{% block right-content %}{% endblock %}
+			</div>
+		</div>
+	</div>
 	</div>
 	
 	<!-- Placing JavaScript code at the end so that pages load faster -->

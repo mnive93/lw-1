@@ -1,7 +1,8 @@
 <div class="span6">
+	<p>This is an inclusion.</p>
 	<form action="." method="post">
 		<p>{% csrf_token %}</p>
-		{{ form.as_table }}
+		<textarea name="text" id="id_text" placeholder="What's up"></textarea>
 		<button type="submit" class="btn">Post</button>
 	</form>
 </div>

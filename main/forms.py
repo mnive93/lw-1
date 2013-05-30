@@ -27,3 +27,6 @@ class SignupFormB(forms.Form):
         except ObjectDoesNotExist:
             return user
         raise forms.ValidationError('Username already taken. Please pick another one.')
+    
+class PostingForm(forms.Form):
+    text = forms.CharField(max_length=250, widget=forms.Textarea())
