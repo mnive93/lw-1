@@ -127,6 +127,11 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
+APP_KEY = '5dko2Ytg1AYFDnAhba3UAQ'
+APP_SECRET = 'd7WNvDZKtiZ2453NeNtmfVYCqeHK4MpjRC2xU4l1Rs'
+LOGIN_URL='http://localhost/'
+LOGIN_REDIRECT_URL='http://localhost/result/'
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

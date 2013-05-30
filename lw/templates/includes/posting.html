@@ -1,0 +1,7 @@
+<div class="span6">
+	<form action="." method="post">
+		<p>{% csrf_token %}</p>
+		{{ form.as_table }}
+		<button type="submit" class="btn">Post</button>
+	</form>
+</div>

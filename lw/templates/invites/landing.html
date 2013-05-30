@@ -7,15 +7,17 @@
 	<div class="span9">
 		<h1>Hello.</h1>
 		<h3>Nice to meet us? Likewyss.</h3>
-		<form action="." class="well" method="post">
+		<form action="/emailadded/" class="well" method="post">
 			<p>Likewyss will be available only to select few people initially. Just {{ number }} slots left. Hurry up!</p>
 			<input type="text" class="input-xxlarge" name="emailaddress" placeholder="Enter your email address" id="id_emailaddress" /><br>
 			<button type="submit" class="input-xlarge btn btn-success" id="countmein">Count me in</button>
 			<p>{% csrf_token %}</p>
-			<button class="btn btn-facebook"><i class="icon-facebook">&nbsp;&nbsp;Connect with Facebook</i></button>&nbsp;&nbsp;
-			<button class="btn btn-twitter"><i class="icon-twitter">&nbsp;&nbsp;Connect with Twitter</i></button>&nbsp;&nbsp;
-			<button class="btn btn-google-plus"><i class="icon-google-plus">&nbsp;&nbsp;Connect with Google+</i></button>
 		</form>
+		<div class="well span8">
+		<button class="btn btn-facebook"><i class="icon-facebook">&nbsp;&nbsp;Connect with Facebook</i></button>&nbsp;&nbsp;
+		<a href="twitter/"><button class="btn btn-twitter"><i class="icon-twitter">&nbsp;&nbsp;Connect with Twitter</i></button></a>&nbsp;&nbsp;
+		<button class="btn btn-google-plus"><i class="icon-google-plus">&nbsp;&nbsp;Connect with Google+</i></button>
+		</div>
 	</div>
 </div>
 
