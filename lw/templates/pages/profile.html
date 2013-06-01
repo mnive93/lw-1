@@ -23,7 +23,8 @@
 {% endblock %}
 
 {% block right-content %}
-<div class="padded-wrapper" id="timeline-wrapper">
+<div class="padded-wrapper" >
+	{% if posts %}
 	{% for post in posts %}
 	<div class="span4 well post-wrapper">
 		<h5 class="poster-name">{{ post.user.get_full_name }}</h5>
@@ -31,5 +32,8 @@
 		<p class="post-text">{{ post.text }}</p>
 	</div>
 	{% endfor %}
+	{% else %}
+	<p class="error">{{ fullname }} has not posted anything yet.</p>
+	{% endif %}
 </div>	
 {% endblock %}

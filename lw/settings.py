@@ -95,19 +95,12 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'facebook.djangofb.FacebookMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'fbconnect.middleware.FacebookConnectMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
-AUTHENTICATION_BACKENDS = {
-    'fbconnect.models.FacebookBackend',
-    'django.contrib.auth.backend.ModelBackend'
-}
 
 ROOT_URLCONF = 'lw.urls'
 
@@ -128,7 +121,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'invites',
     'main',
-    'fbconnect',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -142,8 +134,13 @@ FACEBOOK_API_KEY = '626969007330520'
 FACEBOOK_SECRET_KEY = 'b4a54affedfb1fcfe9a5978c97e11ce8'
 FACEBOOK_INTERNAL = True
 
+# Settings for Twitter
+
 APP_KEY = '5dko2Ytg1AYFDnAhba3UAQ'
 APP_SECRET = 'd7WNvDZKtiZ2453NeNtmfVYCqeHK4MpjRC2xU4l1Rs'
+
+# General login and login-redirect settings
+
 LOGIN_URL='/'
 LOGIN_REDIRECT_URL='/result/'
 

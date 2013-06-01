@@ -121,7 +121,7 @@ def profilepage(request, username):
     except ObjectDoesNotExist:
         raise Http404()
     
-    posts = Posts.objects.all()
+    posts = Posts.objects.filter(user = user)
     
     var = RequestContext(request, {
         'username':user.username,

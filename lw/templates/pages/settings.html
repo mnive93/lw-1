@@ -1,0 +1,37 @@
+{% extends 'parent/bicolumnar-base.html' %}
+
+{% block title %}Settings{% endblock %}
+
+{% block left-content %}
+<div id="basic-info-wrapper" class="span4 padded-wrapper well">
+	<h4><a href="/u/{{ user.username }}">{{ user.get_full_name }}</a></h4>
+	<h6>{{ user.username }}</h6>
+</div>
+
+<div id="added-info-wrapper" class="span4 well">
+	<ul>	
+		<li class="span1"><span class="statistic">7,450</span> <span class="stattext">posts</span></li>
+		<li class="span1"><span class="statistic">3,583</span> <span class="stattext">starred</span></li>
+		<li class="span1"><span class="statistic">1,209</span> <span class="stattext">fans</span></li>
+	</ul>
+	
+	<div class="span2" id="social">
+		<a href="https://www.facebook.com/{{ facebook }}" target='_blank'><button class="btn btn-facebook"><i class="icon-facebook"></i></button></a>
+		<a href="https://www.twitter.com/{{ twitter }}" target='_blank'><button class="btn btn-twitter"><i class="icon-twitter"></i></button></a>
+	</div>
+</div>
+{% endblock %}
+
+{% block right-content %}
+<div class="span4 padded-wrapper well">
+	<h1>Settings</h1>
+	<form action="." method="post">
+		{% csrf_token %}
+		<input type="text" name="fullname" id="id_fullname" placeholder="{{ user.get_full_name }}" />
+		<input type="text" name="username" id="id_username" placeholder="{{ user.username }}" />
+		<input type="text" name="password" id="id_password" placeholder="{{ user.email }}" />
+		<input type="password" name="password" id="id_password" placeholder="Change your password" />
+		<button type="submit" class="btn btn-success"><i class="icon-cogs"></i>&nbsp;&nbsp;Save settings</button>
+	</form>
+</div>
+{% endblock %}
