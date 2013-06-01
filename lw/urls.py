@@ -10,8 +10,10 @@ media = os.path.join(os.path.dirname(__file__), 'media')
 urlpatterns = patterns('',
     (r'^$', landing),
     (r'^emailadded/$', processInviteRequest),
-    (r'^twitter/$', beginTwitterAuth),
-    (r'^result/$', thanks),
+    (r'^fblogin/$', facebook_login),
+    (r'^fbsuccess/$', facebook_login_success),
+    (r'^twitter/$', auth),
+    (r'^result/$', info),
 )
 
 urlpatterns += patterns('',

@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'invites',
     'main',
+    'south',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -130,14 +131,15 @@ INSTALLED_APPS = (
 # Facebook app settings
 
 FACEBOOK_CACHE_TIMEOUT = 1800
-FACEBOOK_API_KEY = '626969007330520'
-FACEBOOK_SECRET_KEY = 'b4a54affedfb1fcfe9a5978c97e11ce8'
+FACEBOOK_APP_ID = '420827331357585'
+FACEBOOK_SECRET_KEY = 'b4579f4c51d2252a763b7f5e67e3534c'
+FACEBOOK_REDIRECT_URL = 'http://localhost/fbsuccess'
 FACEBOOK_INTERNAL = True
 
 # Settings for Twitter
 
-APP_KEY = '5dko2Ytg1AYFDnAhba3UAQ'
-APP_SECRET = 'd7WNvDZKtiZ2453NeNtmfVYCqeHK4MpjRC2xU4l1Rs'
+TWITTER_APP_KEY = '5dko2Ytg1AYFDnAhba3UAQ'
+TWITTER_APP_SECRET = 'd7WNvDZKtiZ2453NeNtmfVYCqeHK4MpjRC2xU4l1Rs'
 
 # General login and login-redirect settings
 
